@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ivory: #FCFAF7;
+  --color-parchment: #F5EFEB;
+  --color-sandalwood: #E8DCCF;
+  --color-terracotta: #8C4F31;
+  --color-terracotta-light: #A66341;
+  --color-lotus: #F2D5D5;
+  --color-gold: #9C7C26;
+  --color-rose: #7A4E4E;
+  --color-stone: #2C2621;
+  --color-vermillion: #7A1616;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-stone font-sans selection:bg-lotus selection:text-vermillion;
+  }
+}
+
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
+.manuscript-overlay {
+  background-image: radial-gradient(rgba(193, 127, 91, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px -10px rgba(132, 120, 110, 0.15);
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-\[slide-up_2s_infinite\] {
+  animation: slide-up 2s infinite linear;
+}
+
+.animate-\[slide-down_2s_infinite\] {
+  animation: slide-down 2s infinite linear;
+}

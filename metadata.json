@@ -1,0 +1,6 @@
+{
+  "name": "Rajaswala Paricharya: Ancient Wisdom & Modern Science",
+  "description": "A premium long-form editorial research website exploring the intersection of ancient Ayurvedic wisdom, scriptural evolution, and modern menstrual health.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
